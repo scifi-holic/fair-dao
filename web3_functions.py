@@ -23,6 +23,10 @@ def send_reward(network_id:str, to_address: str, amount: float):
     RPC_URL = "https://rpc.startale.com/zkyoto"
     CONTRACT_ADDRESS = "0xe84Aa76A6600FB0D45B6e1761798dD74900cCF06"  # test ft contract
     CHAIN_ID = 6038361
+  elif network_id == "avalanche-fuji":
+    RPC_URL = "https://avalanche-fuji-c-chain-rpc.publicnode.com"
+    CONTRACT_ADDRESS = "0xe84Aa76A6600FB0D45B6e1761798dD74900cCF06"
+    CHAIN_ID = 43113
   # %%
   w3 = Web3(Web3.HTTPProvider(RPC_URL))
   
