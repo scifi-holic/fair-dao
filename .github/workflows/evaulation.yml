@@ -13,7 +13,7 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     container:
-      image: chrisai/moti-dao:latest
+      image: chrisai/fair-dao:test
     steps:
       - name: $github
         run:   echo "$GITHUB_CONTEXT"
