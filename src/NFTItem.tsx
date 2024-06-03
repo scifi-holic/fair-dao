@@ -70,7 +70,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                moti-dao.
+                fair-dao.
               </a>
             </span>
           </h1>
