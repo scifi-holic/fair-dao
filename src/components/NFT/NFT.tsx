@@ -18,7 +18,7 @@ export default function NFTComponent({ nft }: Props) {
   
   // const tokenBoundRegistry = "0xbf29146F8bC461d101D9Aa755cb84EfCF527Bd9d";
   // const linkContract = "0xe84Aa76A6600FB0D45B6e1761798dD74900cCF06";  // For test
-  // const nftDropContract = "0x9927E162D13199FCE7Edf81210e4aD5304b97185";
+  // const nftDropContract = "0x3AaF770Ad1aF36FcB710058e60Fd49AD52AF765E";
   const { contract: tokenDrop } = useContract(
     linkContract,
     "token-drop"
