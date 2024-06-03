@@ -1,13 +1,13 @@
 import { ConnectWallet, ThirdwebNftMedia, useAddress, useContract, useContractRead, useOwnedNFTs, useTokenBalance, Web3Button } from "@thirdweb-dev/react";
 import "./styles/Home.css";
 import NFTGrid from "./components/NFT/NFTGrid";
-import {tokenBoundRegistry, vAstrContract, nftDropContract, tokenBoundAccount} from "./const/constants";
+import {tokenBoundRegistry, linkContract, nftDropContract, tokenBoundAccount} from "./const/constants";
 
 export default function Home() {
-  // const vAstrContract = "0xe84Aa76A6600FB0D45B6e1761798dD74900cCF06";  // For test
+  // const linkContract = "0xe84Aa76A6600FB0D45B6e1761798dD74900cCF06";  // For test
   // const nftDropContract = "0x9927E162D13199FCE7Edf81210e4aD5304b97185";
   const { contract: tokenDrop } = useContract(
-    vAstrContract,
+    linkContract,
     "token-drop"
   );
   const { contract: nftDrop } = useContract(
@@ -77,7 +77,7 @@ export default function Home() {
           </h1>
 
           <p className="description">
-            Earn vASTR by contributing Open Source projects!
+            Earn LINK by contributing Open Source projects!
           </p>
 
           <div className="connect">
@@ -85,7 +85,7 @@ export default function Home() {
           </div>
         </div>
 
-        Current Balance: {currentBalance?.displayValue} vASTR
+        Current Balance: {currentBalance?.displayValue} LINK
 
         <NFTGrid
             nfts={ownedNfts}
@@ -130,7 +130,7 @@ export default function Home() {
             <div className="card-text">
               <h2 className="gradient-text-2">Open Task List ➜</h2>
               <p>
-                Discuss, Code, and Earn vASTR by contributing to Open Source
+                Discuss, Code, and Earn LINK by contributing to Open Source
               </p>
             </div>
           </a>

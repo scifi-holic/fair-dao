@@ -13,7 +13,7 @@ https://bafybeigmyjuq7r6eqaxavlbe5dodrvgmvgynapb7tnyk6oscoodphc5wee.ipfs.cf-ipfs
 
 https://github.com/chris-chris/moti-dao/pull/9#issuecomment-2048503267
 
-0.3 vASTR for the payment
+0.3 LINK for the payment
 
 ## Environment Variables
 

@@ -4,7 +4,7 @@ import { Chain } from '@thirdweb-dev/chains'
 export const tokenBoundRegistry: string = '0xbf29146F8bC461d101D9Aa755cb84EfCF527Bd9d'
 export const tokenBoundAccount: string = '0x62581d3D1bE9594450c9a7CEaB12E6d92a1dd47e'
 
-export const vAstrContract: string = "0xe84Aa76A6600FB0D45B6e1761798dD74900cCF06";  // For test
+export const linkContract: string = "0x0b9d5D9136855f6FEc3c0993feE6E9CE8a297846";  // For test
 export const nftDropContract: string = "0x9927E162D13199FCE7Edf81210e4aD5304b97185";
 
 export const vaultWallet: string = '0x43B0F187C4882AB02cCE3Bf8f65B7E81687d6E3F';

@@ -1,11 +1,11 @@
 import { ConnectWallet, ThirdwebNftMedia, useAddress, useContract, useContractRead, useOwnedNFTs, useTokenBalance, Web3Button } from "@thirdweb-dev/react";
 import "./styles/Home.css";
-import { tokenBoundRegistry, tokenBoundAccount, vAstrContract, nftDropContract, activeChain } from "./const/constants";
+import { tokenBoundRegistry, tokenBoundAccount, linkContract, nftDropContract, activeChain } from "./const/constants";
 
 
 export default function Home() {
   const { contract: tokenDrop } = useContract(
-    vAstrContract,
+    linkContract,
     "token-drop"
   );
   const { contract: nftDrop } = useContract(
@@ -76,7 +76,7 @@ export default function Home() {
           </h1>
 
           <p className="description">
-            Earn vASTR by contributing Open Source projects!
+            Earn LINK by contributing Open Source projects!
           </p>
 
           <div className="connect">
@@ -84,7 +84,7 @@ export default function Home() {
           </div>
         </div>
 
-        Current Balance: {currentBalance?.displayValue} vASTR
+        Current Balance: {currentBalance?.displayValue} LINK
 
         {ownedNfts?.map((p) => (
           <div  key={p.metadata.id.toString()}>
@@ -100,7 +100,7 @@ export default function Home() {
                 contractAddress={tokenBoundRegistry}
                 action={() => withdraw(p.metadata.id)}
               >
-                Withdraw $vASTR
+                Withdraw $LINK
               </Web3Button>
             </div>
           </div>
@@ -141,7 +141,7 @@ export default function Home() {
             <div className="card-text">
               <h2 className="gradient-text-2">Open Task List ➜</h2>
               <p>
-                Discuss, Code, and Earn vASTR by contributing to Open Source
+                Discuss, Code, and Earn LINK by contributing to Open Source
               </p>
             </div>
           </a>

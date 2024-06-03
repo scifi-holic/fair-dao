@@ -2,7 +2,7 @@ import { ThirdwebNftMedia, useAddress, useContract, useContractRead, useOwnedNFT
 import { NFT } from "@thirdweb-dev/sdk";
 import React, { useEffect, useState } from "react";
 import styles from "./NFT.module.css";
-import { nftDropAddress, nftDropContract, registryAddress, tokenBoundAccount, tokenBoundRegistry, vAstrContract, tokenAddress } from '../../const/constants';
+import { nftDropAddress, nftDropContract, registryAddress, tokenBoundAccount, tokenBoundRegistry, linkContract, tokenAddress } from '../../const/constants';
 import { ethers, Signer } from "ethers";
 import SmartWalletConnected from "../SmartWallet/smartConnected";
 import newSmartWallet from "../SmartWallet/SmartWallet";
@@ -17,10 +17,10 @@ type Props = {
 export default function NFTComponent({ nft }: Props) {
   
   // const tokenBoundRegistry = "0xbf29146F8bC461d101D9Aa755cb84EfCF527Bd9d";
-  // const vAstrContract = "0xe84Aa76A6600FB0D45B6e1761798dD74900cCF06";  // For test
+  // const linkContract = "0xe84Aa76A6600FB0D45B6e1761798dD74900cCF06";  // For test
   // const nftDropContract = "0x9927E162D13199FCE7Edf81210e4aD5304b97185";
   const { contract: tokenDrop } = useContract(
-    vAstrContract,
+    linkContract,
     "token-drop"
   );
   const { contract: registryContract } = useContract(
@@ -110,16 +110,16 @@ export default function NFTComponent({ nft }: Props) {
       
       <Web3Button
         contractAddress={tbaAddress}
-        action={async (contract) => await contract.call("withdrawToken", [vAstrContract, address, currentBalance?.value])}
+        action={async (contract) => await contract.call("withdrawToken", [linkContract, address, currentBalance?.value])}
         onSuccess={() => {
-          console.log(`vASTR Withdrawn!`);
+          console.log(`LINK Withdrawn!`);
         }}
         onError={(e) => {
           console.log(e);
-          console.log(`vASTR Withdrawn Failed! Reason: ${(e as any).reason}`);
+          console.log(`LINK Withdrawn Failed! Reason: ${(e as any).reason}`);
         }}
         >
-          Withdraw {currentBalance?.displayValue} vASTR
+          Withdraw {currentBalance?.displayValue} LINK
       </Web3Button>
     </>
   );
